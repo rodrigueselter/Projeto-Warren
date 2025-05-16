@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berkshire Hathaway Inc.</title>
+    
+  <!-- Google Fonts (Benton Modern substituto: Barlow) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Cormorant', serif;
+      font-weight: 400;
       background-color: #fafafa;
       color: #262626;
+    }
+
+    /* nome Warren Buffett */
+    .warren-buffett-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; /* Peso "bold" */
+    }
+
+    /* Cormorant em negrito */
+    .text-bold-cormorant {
+      font-family: 'Cormorant', serif;
+      font-weight: 600;
     }
 
     header {
@@ -40,6 +59,7 @@
 
     nav a {
       color: inherit;
+      font-family: inherit;
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -85,6 +105,26 @@
       .hero-title {
         font-size: 3rem;
       }
+    }
+
+    @font-face {
+    font-family: 'Benton Modern Regular';
+    src: url('/fonts/BentonModDisp-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'Benton Modern SemiBold';
+    src: url('/fonts/BentonModDisp-Semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'Benton Modern Bold';
+    src: url('/fonts/BentonModDisp-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
     }
 
     .hero-text {
@@ -133,12 +173,12 @@
 
   <!-- Header minimalista -->
   <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
-    <h1 class="text-xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+    <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
     <nav>
       <ul class="flex gap-6 text-sm font-medium">
-        <li><a href="sobre.html" class="hover:text-blue-700 transition">Sobre Nós</a></li>
-        <li><a href="#" class="hover:text-blue-700 transition">Governança</a></li>
-        <li><a href="#" class="hover:text-blue-700 transition">Relatórios</a></li>
+        <li><a href="sobre.html" class="text-lg font-bold hover:text-blue-700 transition">Sobre Nós</a></li>
+        <li><a href="#" class="text-lg font-bold hover:text-blue-700 transition">Governança</a></li>
+        <li><a href="#" class="text-lg font-bold hover:text-blue-700 transition">Relatórios</a></li>
       </ul>
     </nav>
   </header>
@@ -154,18 +194,19 @@
     <!-- Texto Hero -->
     <div class="flex items-center justify-center px-10 py-16">
       <div>
-        <h3 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">
+        <h3 class="text-4xl md:text-5xl warren-buffett-title">
           Warren Buffett
         </h3>
-        <h2 class="text-4xl mt-5 md:text-5xl font-serif font-semibold leading-tight">
+        <h2 class="text-4xl mt-5 md:text-5xl text-bold-cormorant">
           Conheça a visão de longo prazo que molda os mercados
         </h2>
-        <p class="mt-6 text-lg text-neutral-600">
+        <p class="mt-6 text-xl text-neutral-600 Cormorant">
           Descubra a filosofia de investimento de Warren Buffett e Charlie Munger — e como ela transformou a Berkshire
           Hathaway em um dos maiores conglomerados do mundo.
         </p>
         <a href="saiba.html"
-          class="inline-block mt-8 px-6 py-3 bg-neutral-900 text-white text-sm font-medium rounded hover:bg-neutral-800 transition">
+          class="inline-block mt-8 px-6 py-3 bg-neutral-900 text-white text-base font-medium rounded hover:bg-neutral-800 transition ,
+          Playfair">
           Saiba mais
         </a>
       </div>
@@ -173,7 +214,7 @@
   </section>
 
   <!-- Rodapé -->
-  <footer class="text-sm text-neutral-500 text-center py-6 border-t border-neutral-200">
+  <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
     © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
   </footer>
 </body>
