@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berkshire Hathaway Inc.</title>
-    
+
   <!-- Google Fonts (Benton Modern substituto: Barlow) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -21,150 +24,11 @@
       color: #262626;
     }
 
-    /* nome Warren Buffett */
-    .warren-buffett-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700; /* Peso "bold" */
-    }
-
-    /* Cormorant em negrito */
-    .text-bold-cormorant {
+    .memo-content {
       font-family: 'Cormorant', serif;
-      font-weight: 600;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #e5e5e5;
-      background-color: #f8f8f8;
-    }
-
-    header h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      padding: 0;
-      font-size: 0.875rem;
+      line-height: 1.8;
+      font-size: 1.2rem;
       font-weight: 500;
-    }
-
-    nav a {
-      color: inherit;
-      font-family: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #1d4ed8;
-    }
-
-    .hero-section {
-      display: grid;
-      grid-template-columns: 1fr;
-      min-height: 600px;
-      background-color: #fafafa;
-    }
-
-    @media (min-width: 768px) {
-      .hero-section {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 2.5rem;
-    }
-
-    .hero-title {
-      font-family: serif;
-      font-size: 2.25rem;
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    @media (min-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-    }
-
-    @font-face {
-    font-family: 'Benton Modern Regular';
-    src: url('/fonts/BentonModDisp-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    @font-face {
-    font-family: 'Benton Modern SemiBold';
-    src: url('/fonts/BentonModDisp-Semibold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'Benton Modern Bold';
-    src: url('/fonts/BentonModDisp-Bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    .hero-text {
-      margin-top: 1.5rem;
-      font-size: 1.125rem;
-      color: #525252;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #171717;
-      color: white;
-      font-size: 0.875rem;
-      font-weight: 500;
-      border-radius: 0.375rem;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-
-    .hero-button:hover {
-      background-color: #404040;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background-color: #f8f8f8;
-      font-size: 0.875rem;
-      color: #737373;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .text-neutral-500 {
-      color: #737373;
-    }
-
-    .text-sm {
-      font-size: 0.875rem;
     }
   </style>
 </head>
@@ -183,11 +47,55 @@
     </nav>
   </header>
 
-  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] bg-neutral-50">
-   
+  <main class="container mx-auto px-4 py-12 max-w-4xl">
+    <!-- Cabeçalho do Memo -->
+    <header class="mb-10 border-b-2 border-gray-300 pb-6">
+      <div class="flex justify-between items-end mb-4">
+        <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Playfair Display', serif;">
+          Princípios de Governança
+        </h1>
+        <span class="text-base text-gray-500">26 de Setembro de 2001</span>
       </div>
-    </div>
-  </section>
+      <div class="space-y-1 text-base text-gray-600">
+        <p><span class="font-semibold">PARA:</span> Gestores da Berkshire Hathaway ("The All-Stars")</p>
+        <p><span class="font-semibold">DE:</span> Warren E. Buffett</p>
+        <p class="pt-2 italic text-gray-500">Um comunicado sobre liderança em tempos de crise.</p>
+      </div>
+    </header>
+
+    <!-- Conteúdo da Carta -->
+    <article class="space-y-6 text-gray-800 memo-content">
+      <p>As últimas semanas foram tempos difíceis para todos nós em nossas vidas pessoais e para muitos de nós em nossas
+        atividades de negócios.</p>
+      <p>Na Berkshire, estimamos que nossa perda com seguros em 11 de setembro foi de US$ 2,2 bilhões. Rotulamos isso
+        como um "palpite", porque é tudo o que é. Levará muitos anos até que possamos dizer ao mundo, com uma margem
+        estreita, qual foi o número verdadeiro.</p>
+      <p>Uma porcentagem muito alta da perda ocorreu em nossas companhias de seguros nos EUA, com o restante em
+        entidades alemãs e do Reino Unido. Como pagamos regularmente grandes quantias de impostos de renda nos EUA,
+        arcaremos com 65% do custo aplicável às operações nos EUA; o governo arcará com 35%. Muitas seguradoras não
+        terão sua perda mitigada dessa maneira e algumas podem não sobreviver. Embora grande parte de nossa perda seja
+        paga em breve, pagamentos significativos na área de responsabilidade levarão um tempo considerável para serem
+        liquidados.</p>
+      <p>Mesmo com as recuperações fiscais, nossa perda é enorme. No entanto, é uma que a Berkshire pode suportar
+        facilmente. Há muito tempo estamos no negócio de super-catástrofes e estamos preparados, tanto financeiramente
+        quanto psicologicamente, para lidar com elas quando ocorrem. Este não será nosso último golpe, embora esperemos
+        fervorosamente que desastres no futuro surjam de causas naturais, em vez de serem causados pelo homem. (Também
+        esperaríamos que fossem de menor magnitude.)</p>
+      <p>O que vocês devem fazer na gestão de seus negócios? Exatamente o que sempre fazem: Alargar o fosso, construir
+        uma vantagem competitiva duradoura, encantar seus clientes e combater incansavelmente os custos. Com exceção dos
+        preços e coberturas de seguros, quase todas as decisões operacionais que faziam sentido há um mês fazem sentido
+        hoje.</p>
+      <p>Da minha parte, continuarei procurando aquisições sensatas e continuarei a gerir nossos recursos para que a
+        Berkshire permaneça uma Rocha de Gibraltar financeira. Tenho certeza de que estamos em uma recessão,
+        provavelmente relativamente profunda e prolongada, mas elas fazem parte da vida empresarial e estamos
+        preparados.</p>
+      <p>Em suma, vocês cuidam da gestão e eu cuido da preocupação. Essa é uma divisão de trabalho que funcionou para
+        nós no passado e continuará a funcionar bem no futuro.</p>
+      <p>Obrigado, como sempre, pelo ótimo trabalho que todos vocês fazem e que, por sua vez, torna o meu trabalho tão
+        fácil.</p>
+      <p>Warren</p>
+    </article>
+  </main>
 
   <!-- Rodapé -->
   <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">

@@ -12,6 +12,8 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  
   <style>
     body {
       margin: 0;
@@ -181,11 +183,21 @@
     </nav>
   </header>
 
+  <main class="">
+    <section id="chart-container">
+      <h2 class="text-2xl font-bold text-neutral-800 mb-1">Cotação do BDR (BERK34)</h2>
+      <p class="text-neutral-500 mb-4">Dados com atualização simulada a partir do último fecho.</p>
+      <div id="stockChart" style="display: none;"></div>
+      <div id="loading" class="text-center py-8">A carregar dados do gráfico...</div>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
     © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
   </footer>
 </body>
+
+<script src="gráfico.js" defer></script>
 
 </html>
