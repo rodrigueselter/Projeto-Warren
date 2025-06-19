@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berkshire Hathaway Inc.</title>
     
-  <!-- Google Fonts (Benton Modern substituto: Barlow) -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -18,162 +17,41 @@
       margin: 0;
       font-family: 'Cormorant', serif;
       font-weight: 400;
-      background-color: #fafafa;
+      background-color: #f8fafc;
       color: #262626;
     }
 
-    /* nome Warren Buffett */
-    .warren-buffett-title {
+    .title-font {
       font-family: 'Playfair Display', serif;
-      font-weight: 700; /* Peso "bold" */
     }
 
-    /* Cormorant em negrito */
+    .warren-buffett-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
     .text-bold-cormorant {
       font-family: 'Cormorant', serif;
       font-weight: 600;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #e5e5e5;
-      background-color: #f8f8f8;
+    .company-logo {
+        transition: all 0.3s ease-in-out;
+        filter: grayscale(100%);
+        opacity: 0.6;
     }
-
-    header h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      padding: 0;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    nav a {
-      color: inherit;
-      font-family: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #1d4ed8;
-    }
-
-    .hero-section {
-      display: grid;
-      grid-template-columns: 1fr;
-      min-height: 600px;
-      background-color: #fafafa;
-    }
-
-    @media (min-width: 768px) {
-      .hero-section {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 2.5rem;
-    }
-
-    .hero-title {
-      font-family: serif;
-      font-size: 2.25rem;
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    @media (min-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-    }
-
-    @font-face {
-    font-family: 'Benton Modern Regular';
-    src: url('/fonts/BentonModDisp-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    @font-face {
-    font-family: 'Benton Modern SemiBold';
-    src: url('/fonts/BentonModDisp-Semibold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'Benton Modern Bold';
-    src: url('/fonts/BentonModDisp-Bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    .hero-text {
-      margin-top: 1.5rem;
-      font-size: 1.125rem;
-      color: #525252;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #171717;
-      color: white;
-      font-size: 0.875rem;
-      font-weight: 500;
-      border-radius: 0.375rem;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-
-    .hero-button:hover {
-      background-color: #404040;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background-color: #f8f8f8;
-      font-size: 0.875rem;
-      color: #737373;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .text-neutral-500 {
-      color: #737373;
-    }
-
-    .text-sm {
-      font-size: 0.875rem;
+    .company-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.1);
     }
   </style>
 </head>
 
-<body class="bg-neutral-50 text-neutral-800">
+<body class="bg-slate-50 text-neutral-800">
 
   <!-- Header minimalista -->
-  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
+  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200 bg-white">
     <a href="index.html">
       <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
     </a>
@@ -186,16 +64,13 @@
     </nav>
   </header>
 
-  <!-- Hero à la JP Morgan -->
-  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] bg-neutral-50">
-    <!-- Imagem do Warren Buffett -->
+  <!-- Seção Hero -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] bg-white">
     <div class="h-full">
       <img src="https://images.wsj.net/im-53681803?width=700&height=875"
            alt="Warren Buffett"
            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" />
     </div>
-
-    <!-- Texto Hero -->
     <div class="flex items-center justify-center px-10 py-16">
       <div>
         <h3 class="text-4xl md:text-5xl warren-buffett-title">
@@ -204,75 +79,142 @@
         <h2 class="text-4xl mt-5 md:text-5xl text-bold-cormorant">
           Conheça a visão de longo prazo que molda os mercados
         </h2>
-        <p class="mt-6 text-xl text-neutral-600 Cormorant">
+        <p class="mt-6 text-xl text-neutral-600">
           Descubra a filosofia de investimento de Warren Buffett e Charlie Munger — e como ela transformou a Berkshire
           Hathaway em um dos maiores conglomerados do mundo.
         </p>
         <a href="saiba.html"
-          class="inline-block mt-8 px-6 py-3 bg-neutral-900 text-white text-base font-medium rounded hover:bg-neutral-800 transition ,
-          Playfair">
+          class="inline-block mt-8 px-6 py-3 bg-neutral-900 text-white text-base font-medium rounded hover:bg-neutral-800 transition">
           Saiba mais
         </a>
       </div>
     </div>
   </section>
 
+  <!-- Seção de Valores -->
+  <section class="bg-slate-50 py-20">
+      <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl title-font font-bold mb-12">Nossos Princípios</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 p-4 rounded-full mb-4">
+                      <svg class="w-8 h-8 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-2">Visão de Longo Prazo</h3>
+                  <p class="text-neutral-600">Investimos em empresas com vantagens competitivas duradouras, ignorando as flutuações de curto prazo do mercado.</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 p-4 rounded-full mb-4">
+                      <svg class="w-8 h-8 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-2">Gestão Descentralizada</h3>
+                  <p class="text-neutral-600">Confiamos nos gestores de nossas empresas para operarem de forma autônoma, promovendo uma cultura de responsabilidade e iniciativa.</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 p-4 rounded-full mb-4">
+                      <svg class="w-8 h-8 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-2">Integridade e Confiança</h3>
+                  <p class="text-neutral-600">Nossa reputação é nosso ativo mais valioso. Conduzimos nossos negócios com a máxima integridade e transparência.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Seção de Empresas em Destaque -->
+  <section class="bg-white py-20">
+      <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl title-font font-bold mb-4">Um Portfólio de Empresas Extraordinárias</h2>
+          <p class="text-xl text-neutral-600 mb-12">De seguros a ferrovias, de doces a baterias, estas são algumas das marcas que fazem parte da nossa família.</p>
+          <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GEICO_logo.svg/2560px-GEICO_logo.svg.png" alt="GEICO" class="h-10 company-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BNSF_Railway.svg/2560px-BNSF_Railway.svg.png" alt="BNSF" class="h-12 company-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Duracell_logo.svg/2560px-Duracell_logo.svg.png" alt="Duracell" class="h-10 company-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/See%27s_Candies_logo.svg" alt="See's Candies" class="h-16 company-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Dairy_Queen_logo.svg/2560px-Dairy_Queen_logo.svg.png" alt="Dairy Queen" class="h-12 company-logo">
+          </div>
+      </div>
+  </section>
+
+  <!-- Seção de Citação -->
+  <section class="bg-slate-800 text-white py-20">
+      <div class="container mx-auto px-6 text-center max-w-4xl">
+          <blockquote class="text-3xl leading-relaxed italic">
+              "Alguém está sentado na sombra hoje porque alguém plantou uma árvore há muito tempo."
+          </blockquote>
+          <cite class="block mt-6 text-xl not-italic text-slate-300">— Warren Buffett</cite>
+      </div>
+  </section>
+  
   <!-- Seção de Feedback -->
-<section class="bg-neutral-50 px-6 py-12 max-w-4xl mx-auto">
-  <h2 class="text-3xl font-semibold mb-6 text-center text-neutral-800">Envie seu Feedback</h2>
-  <p class="text-center mb-8 text-neutral-600 max-w-xl mx-auto">
-    Queremos ouvir você! Envie sugestões, elogios ou críticas para ajudar a melhorar nosso site.
-  </p>
+  <section class="bg-slate-50 px-6 py-20 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-neutral-800">Envie seu Feedback</h2>
+    <p class="text-center mb-8 text-neutral-600 max-w-xl mx-auto">
+      Queremos ouvir você! Envie sugestões, elogios ou críticas para ajudar a melhorar nosso site.
+    </p>
 
-  <form id="feedback-form" class="flex flex-col gap-6" novalidate>
-    <div>
-      <label for="name" class="block mb-2 font-medium text-neutral-700">Nome</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Seu nome"
-        required
-        class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-      />
+    <form id="feedback-form" class="flex flex-col gap-6" novalidate>
+      <div>
+        <label for="name" class="block mb-2 font-medium text-neutral-700">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+      </div>
+      <div>
+        <label for="email" class="block mb-2 font-medium text-neutral-700">Email</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+      </div>
+      <div>
+        <label for="message" class="block mb-2 font-medium text-neutral-700">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"></textarea>
+      </div>
+      <button type="submit" class="self-center bg-neutral-900 text-white px-6 py-3 rounded text-lg font-medium hover:bg-neutral-800 transition">
+        Enviar Feedback
+      </button>
+    </form>
+
+    <p id="feedback-response" class="mt-6 text-center text-green-600 font-semibold hidden">
+      Obrigado pelo seu feedback!
+    </p>
+  </section>
+
+  <!-- Rodapé Aprimorado -->
+  <footer class="bg-neutral-800 text-neutral-300 pt-16 pb-8">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Endereço -->
+        <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Berkshire Hathaway Inc.</h3>
+            <p>3555 Farnam Street</p>
+            <p>Omaha, NE 68131</p>
+            <p class="mt-4 text-sm text-neutral-400">Este é o nosso único endereço corporativo.</p>
+        </div>
+        <!-- Navegação Rápida -->
+        <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Navegação</h3>
+            <ul>
+                <li class="mb-2"><a href="sobre.html" class="hover:text-white transition">Sobre Nós</a></li>
+                <li class="mb-2"><a href="Relatorios.html" class="hover:text-white transition">Relatórios Financeiros</a></li>
+                <li class="mb-2"><a href="governaça.html" class="hover:text-white transition">Governança</a></li>
+                <li class="mb-2"><a href="saiba.html" class="hover:text-white transition">Saiba Mais</a></li>
+            </ul>
+        </div>
+        <!-- Mapa -->
+        <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Localização</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.741270258074!2d-95.9678196845791!3d41.24831697927728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938de15a133d01%3A0x82a5789856a9a836!2sBerkshire%20Hathaway%20Inc!5e0!3m2!1spt-BR!2sbr!4v1655845588383!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="150" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-md">
+            </iframe>
+        </div>
     </div>
-
-    <div>
-      <label for="email" class="block mb-2 font-medium text-neutral-700">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="seu@email.com"
-        required
-        class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-      />
+    <div class="text-center text-neutral-400 border-t border-neutral-700 mt-12 pt-6">
+        <p>© 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.</p>
     </div>
-
-    <div>
-      <label for="message" class="block mb-2 font-medium text-neutral-700">Mensagem</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="5"
-        placeholder="Escreva sua mensagem aqui..."
-        required
-        class="w-full px-4 py-2 border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
-      ></textarea>
-    </div>
-
-    <button
-      type="submit"
-      class="self-center bg-neutral-900 text-white px-6 py-3 rounded text-lg font-medium hover:bg-neutral-800 transition"
-    >
-      Enviar Feedback
-    </button>
-  </form>
-
-  <p id="feedback-response" class="mt-6 text-center text-green-600 font-semibold hidden">
-    Obrigado pelo seu feedback!
-  </p>
-</section>
+  </footer>
 
 <script>
   const form = document.getElementById('feedback-form');
@@ -280,25 +222,15 @@
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    // Aqui você pode fazer a chamada real para backend, API, etc.
-    // Por enquanto, só simulamos um envio bem-sucedido.
     
     responseMsg.classList.remove('hidden');
     form.reset();
 
-    // Esconde a mensagem depois de 5 segundos
     setTimeout(() => {
       responseMsg.classList.add('hidden');
     }, 5000);
   });
 </script>
 
-
-  <!-- Rodapé -->
-  <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
-    © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
-  </footer>
 </body>
-
 </html>
