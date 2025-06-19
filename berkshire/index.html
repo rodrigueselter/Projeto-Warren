@@ -6,6 +6,7 @@
   <title>Berkshire Hathaway Inc.</title>
     
   <!-- Google Fonts (Benton Modern substituto: Barlow) -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -173,7 +174,9 @@
 
   <!-- Header minimalista -->
   <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
-    <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+    <a href="index.html">
+      <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+    </a>
     <nav>
       <ul class="flex gap-6 text-sm font-medium">
         <li><a href="sobre.html" class="text-lg font-bold hover:text-blue-700 transition">Sobre Nós</a></li>
@@ -187,8 +190,9 @@
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] bg-neutral-50">
     <!-- Imagem do Warren Buffett -->
     <div class="h-full">
-      <img src="https://images.wsj.net/im-53681803?width=700&height=875" alt="Warren Buffett"
-        class="w-full h-full object-cover" />
+      <img src="https://images.wsj.net/im-53681803?width=700&height=875"
+           alt="Warren Buffett"
+           class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" />
     </div>
 
     <!-- Texto Hero -->
