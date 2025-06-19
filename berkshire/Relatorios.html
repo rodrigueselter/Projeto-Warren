@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiba Mais | Berkshire Hathaway</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Cormorant', serif;
+          font-weight: 400;
+          background-color: #fafafa;
+          color: #262626;
+        }
+    
+        /* nome Warren Buffett */
+        .warren-buffett-title {
+          font-family: 'Playfair Display', serif;
+          font-weight: 700; /* Peso "bold" */
+        }
+    
+        /* Cormorant em negrito */
+        .text-bold-cormorant {
+          font-family: 'Cormorant', serif;
+          font-weight: 600;
+        }
+    
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 1.5rem;
+          border-bottom: 1px solid #e5e5e5;
+          background-color: #f8f8f8;
+        }
+    
+        header h1 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin: 0;
+        }
+    
+        nav ul {
+          display: flex;
+          gap: 1.5rem;
+          list-style: none;
+          padding: 0;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+    
+        nav a {
+          color: inherit;
+          font-family: inherit;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+    
+        nav a:hover {
+          color: #1d4ed8;
+        }
+    
+        .hero-section {
+          display: grid;
+          grid-template-columns: 1fr;
+          min-height: 600px;
+          background-color: #fafafa;
+        }
+    
+        @media (min-width: 768px) {
+          .hero-section {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+    
+        .hero-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        .hero-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem 2.5rem;
+        }
+    
+        .hero-title {
+          font-family: serif;
+          font-size: 2.25rem;
+          font-weight: 600;
+          line-height: 1.25;
+        }
+    
+        @media (min-width: 768px) {
+          .hero-title {
+            font-size: 3rem;
+          }
+        }
+    
+        @font-face {
+        font-family: 'Benton Modern Regular';
+        src: url('/fonts/BentonModDisp-Regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    
+        @font-face {
+        font-family: 'Benton Modern SemiBold';
+        src: url('/fonts/BentonModDisp-Semibold.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'Benton Modern Bold';
+        src: url('/fonts/BentonModDisp-Bold.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    
+        .hero-text {
+          margin-top: 1.5rem;
+          font-size: 1.125rem;
+          color: #525252;
+        }
+    
+        .hero-button {
+          display: inline-block;
+          margin-top: 2rem;
+          padding: 0.75rem 1.5rem;
+          background-color: #171717;
+          color: white;
+          font-size: 0.875rem;
+          font-weight: 500;
+          border-radius: 0.375rem;
+          text-decoration: none;
+          transition: background-color 0.2s;
+        }
+    
+        .hero-button:hover {
+          background-color: #404040;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 1.5rem 0;
+          background-color: #f8f8f8;
+          font-size: 0.875rem;
+          color: #737373;
+          border-top: 1px solid #e5e5e5;
+        }
+    
+        .text-neutral-500 {
+          color: #737373;
+        }
+    
+        .text-sm {
+          font-size: 0.875rem;
+        }
+      </style>
+</head>
+<body class="bg-gray-50">
+    <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
+        <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+        <nav>
+          <ul class="flex gap-6 text-sm font-medium">
+            <li><a href="sobre.html" class="text-lg font-bold hover:text-blue-700 transition">Sobre Nós</a></li>
+            <li><a href="governaça.html" class="text-lg font-bold hover:text-blue-700 transition">Governança</a></li>
+            <li><a href="index.html" class="text-lg font-bold hover:text-blue-700 transition">Principal</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="max-w-6xl mx-auto px-6 py-12 bg-white rounded-md shadow-md">
+  <h2 class="text-3xl font-semibold mb-8 text-center text-neutral-800">Relatórios</h2>
+
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-300 text-sm text-left">
+      <thead class="bg-neutral-100">
+        <tr>
+          <th class="border border-neutral-300 px-4 py-2 font-semibold">Ano</th>
+          <th class="border border-neutral-300 px-4 py-2 font-semibold">1º Trimestre</th>
+          <th class="border border-neutral-300 px-4 py-2 font-semibold">2º Trimestre</th>
+          <th class="border border-neutral-300 px-4 py-2 font-semibold">3º Trimestre</th>
+          <th class="border border-neutral-300 px-4 py-2 font-semibold">Anual*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2025</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr25.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2"></td>
+          <td class="border border-neutral-300 px-4 py-2"></td>
+          <td class="border border-neutral-300 px-4 py-2"></td>
+        </tr>
+        <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2024</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2023</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2022</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2021</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2020</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2019</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2018</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2017</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2016</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2015</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2014</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2013</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2012</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2011</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+                <tr class="odd:bg-white even:bg-neutral-50">
+          <td class="border border-neutral-300 px-4 py-2">2010</td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/1stqtr24.pdf" class="text-blue-600 hover:underline">Primeiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/2ndqtr24.pdf" class="text-blue-600 hover:underline">Segundo trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/qtrly/3rdqtr24.pdf" class="text-blue-600 hover:underline">Terceiro trimestre</a>
+          </td>
+          <td class="border border-neutral-300 px-4 py-2">
+            <a href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf" class="text-blue-600 hover:underline">Relatório anual</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+        <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
+            © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
+          </footer>
+    </div>
+</body>
+</html>
