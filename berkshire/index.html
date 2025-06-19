@@ -35,15 +35,15 @@
       font-weight: 600;
     }
 
-    .company-logo {
-        transition: all 0.3s ease-in-out;
-        filter: grayscale(100%);
-        opacity: 0.6;
+    .company-logo-container {
+      transition: all 0.3s ease-in-out;
+      filter: grayscale(100%);
+      opacity: 0.6;
     }
-    .company-logo:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-        transform: scale(1.1);
+    .company-logo-container:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -123,17 +123,28 @@
 
   <!-- Seção de Empresas em Destaque -->
   <section class="bg-white py-20">
-      <div class="container mx-auto px-6 text-center">
-          <h2 class="text-4xl title-font font-bold mb-4">Um Portfólio de Empresas Extraordinárias</h2>
-          <p class="text-xl text-neutral-600 mb-12">De seguros a ferrovias, de doces a baterias, estas são algumas das marcas que fazem parte da nossa família.</p>
-          <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GEICO_logo.svg/2560px-GEICO_logo.svg.png" alt="GEICO" class="h-10 company-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BNSF_Railway.svg/2560px-BNSF_Railway.svg.png" alt="BNSF" class="h-12 company-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Duracell_logo.svg/2560px-Duracell_logo.svg.png" alt="Duracell" class="h-10 company-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/See%27s_Candies_logo.svg" alt="See's Candies" class="h-16 company-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Dairy_Queen_logo.svg/2560px-Dairy_Queen_logo.svg.png" alt="Dairy Queen" class="h-12 company-logo">
-          </div>
-      </div>
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl title-font font-bold mb-4">Um Portfólio de Empresas Extraordinárias</h2>
+        <p class="text-xl text-neutral-600 mb-12">De seguros a ferrovias, de doces a baterias, estas são algumas das marcas que fazem parte da nossa família.</p>
+        <div class="flex flex-wrap justify-center items-center gap-8">
+            <!-- Container de Logo Padronizado -->
+            <div class="h-20 w-40 flex justify-center items-center p-2 company-logo-container">
+              <img src="images/geico-removebg-preview.png" alt="GEICO" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="h-20 w-40 flex justify-center items-center p-2 company-logo-container">
+              <img src="images/bnsf-removebg-preview.png" alt="BNSF" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="h-20 w-40 flex justify-center items-center p-2 company-logo-container">
+              <img src="images/duracell-removebg-preview.png" alt="Duracell" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="h-20 w-40 flex justify-center items-center p-2 company-logo-container">
+              <img src="images/see-s-candies-removebg-preview.png" alt="See's Candies" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="h-40 w-60 flex justify-center items-center p-2 company-logo-container">
+              <img src="images/dairy-queen-removebg-preview.png" alt="Dairy Queen" class="max-h-full max-w-full object-contain">
+            </div>
+        </div>
+    </div>
   </section>
 
   <!-- Seção de Citação -->
@@ -183,7 +194,7 @@
         <div>
             <h3 class="text-xl font-semibold text-white mb-4">Berkshire Hathaway Inc.</h3>
             <p>3555 Farnam Street</p>
-            <p>Omaha, NE 68131</p>
+            <p>Omaha, NE 68131, EUA</p>
             <p class="mt-4 text-sm text-neutral-400">Este é o nosso único endereço corporativo.</p>
         </div>
         <!-- Navegação Rápida -->
@@ -200,7 +211,7 @@
         <div>
             <h3 class="text-xl font-semibold text-white mb-4">Localização</h3>
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.741270258074!2d-95.9678196845791!3d41.24831697927728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938de15a133d01%3A0x82a5789856a9a836!2sBerkshire%20Hathaway%20Inc!5e0!3m2!1spt-BR!2sbr!4v1655845588383!5m2!1spt-BR!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.741270258074!2d-95.9656256233065!3d41.24831697917639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938de15a133d01%3A0x82a5789856a9a836!2sBerkshire%20Hathaway%20Corporate!5e0!3m2!1spt-BR!2sbr"
                 width="100%" 
                 height="150" 
                 style="border:0;" 
