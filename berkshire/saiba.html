@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saiba Mais | Berkshire Hathaway</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: 'Cormorant', serif;
-        font-weight: 400;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saiba Mais | Berkshire Hathaway</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Cormorant', serif;
+      font-weight: 400;
+      background-color: #f8fafc; /* Um cinza um pouco mais claro */
+    }
 
-      .title-font {
-        font-family: 'Playfair Display', serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-neutral-800">
-    <!-- Header -->
-    <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
-      <a href="index.html">
-        <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
-      </a>
-      <nav>
-        <ul class="flex gap-6 text-sm font-medium">
-          <li><a href="index.html" class="text-lg font-bold hover:text-blue-700 transition">Principal</a></li>
-          <li><a href="governaça.html" class="text-lg font-bold hover:text-blue-700 transition">Governança</a></li>
-          <li><a href="Relatorios.html" class="text-lg font-bold hover:text-blue-700 transition">Relatórios</a></li>
-        </ul>
-      </nav>
-    </header>
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .accordion-button {
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+      padding: 0 1.5rem;
+    }
+
+    .accordion-button.active + .accordion-panel {
+      max-height: 500px; /* Ajuste conforme necessário */
+      padding: 1.5rem;
+    }
+    
+    .accordion-button .arrow {
+      transition: transform 0.4s ease;
+    }
+    
+    .accordion-button.active .arrow {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-neutral-800">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200 bg-white">
+    <a href="index.html">
+      <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+    </a>
+    <nav>
+      <ul class="flex gap-6 text-sm font-medium">
+        <li><a href="index.html" class="text-lg font-bold hover:text-blue-700 transition">Principal</a></li>
+        <li><a href="governaça.html" class="text-lg font-bold hover:text-blue-700 transition">Governança</a></li>
+        <li><a href="Relatorios.html" class="text-lg font-bold hover:text-blue-700 transition">Relatórios</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Conteúdo -->
     <main class="max-w-6xl mx-auto px-4 py-16">
@@ -69,36 +94,76 @@
           <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
             <h2 class="text-2xl font-semibold text-blue-800 mb-4">Materiais Históricos</h2>
             <ul class="space-y-3 text-gray-600">
-              <li><a href="páginas menores/Cartas_Warren.html" class="hover:text-blue-700 transition">Cartas de Warren Buffett aos Acionistas</a></li>
-              <li><a href="páginas menores/Cartas_Charlie.html" class="hover:text-blue-700 transition">Cartas de Charlie Munger aos Acionistas</a></li>
-              <li><a href="páginas menores/Livro_Comemorativo.html" class="hover:text-blue-700 transition">Livro Comemorativo</a></li>
+              <li><a href="#" class="hover:text-blue-700 transition">Cartas de Warren Buffett aos Acionistas</a></li>
+              <li><a href="#" class="hover:text-blue-700 transition">Cartas de Charlie Munger aos Acionistas</a></li>
+              <li><a href="#" class="hover:text-blue-700 transition">Livro Comemorativo</a></li>
             </ul>
-          </section>
-
-          <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Informações Gerais</h2>
-            <ul class="space-y-3 text-gray-600">
-              <li><a href="páginas menores/Empresas.html" class="hover:text-blue-700 transition">Empresas do Grupo Berkshire</a></li>
-              <li><a href="#" class="hover:text-blue-700 transition">Doações de Ações</a></li>
-              <li><a href="#" class="hover:text-blue-700 transition">Informações sobre Ações</a></li>
-              <li><a href="#" class="hover:text-blue-700 transition">Declarações Oficiais</a></li>
-            </ul>
-          </section>
-
-          <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Avisos Legais</h2>
-            <ul class="space-y-3 text-gray-600">
-              <li><a href="https://www.berkshirehathaway.com/brkshareholderinfo/transferagentinfo.pdf" class="hover:text-blue-700 transition">Declarações sobre Endossos</a></li>
-              <li><a href="páginas menores/disclaimer.html" class="hover:text-blue-700 transition">Política de Privacidade</a></li>
-            </ul>
-          </section>
         </div>
       </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
-      © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
-    </footer>
-  </body>
+      <!-- Item 4: Informações Gerais -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
+        <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
+          <span class="flex items-center">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span class="text-2xl font-semibold text-blue-800">Informações Gerais</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow text-gray-500"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="accordion-panel">
+           <ul class="space-y-3 text-gray-600 pl-10 border-l border-gray-200">
+              <li><a href="páginas menores/Empresas.html" class="hover:text-blue-700 transition">Empresas do Grupo Berkshire</a></li>
+              <li><a href="páginas menores/Doacao.html" class="hover:text-blue-700 transition">Doações de Ações</a></li>
+              <li><a href="páginas menores/InfoAcao.html" class="hover:text-blue-700 transition">Informações sobre Ações</a></li>
+              <li><a href="páginas menores/Declaracao.html" class="hover:text-blue-700 transition">Declarações Oficiais</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- Item 5: Avisos Legais -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
+        <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
+          <span class="flex items-center">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="text-2xl font-semibold text-blue-800">Avisos Legais</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow text-gray-500"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="accordion-panel">
+           <ul class="space-y-3 text-gray-600 pl-10 border-l border-gray-200">
+              <li><a href="https://www.berkshirehathaway.com/brkshareholderinfo/transferagentinfo.pdf" target="_blank" class="hover:text-blue-700 transition">Declarações sobre Endossos</a></li>
+              <li><a href="páginas menores/disclaimer.html" class="hover:text-blue-700 transition">Política de Privacidade</a></li>
+            </ul>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200 bg-white mt-16">
+    © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Fecha outros painéis se desejar comportamento de acordeão exclusivo
+          // accordionButtons.forEach(otherButton => {
+          //   if (otherButton !== button) {
+          //     otherButton.classList.remove('active');
+          //   }
+          // });
+
+          button.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
 </html>

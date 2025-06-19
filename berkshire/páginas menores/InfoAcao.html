@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Informações Legais | Berkshire Hathaway</title>
+  <title>Informações sobre Ações | Berkshire Hathaway</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,16 @@
       font-family: 'Playfair Display', serif;
     }
 
+    .info-link {
+        color: #000080; /* Azul marinho */
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .info-link:hover {
+        text-decoration: underline;
+    }
+
   </style>
 </head>
 
@@ -43,22 +53,37 @@
     </nav>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-16">
+  <main class="max-w-5xl mx-auto px-4 py-16">
 
-    <div class="border-t border-b border-neutral-300 py-8">
-        <h1 class="text-center text-2xl font-semibold tracking-widest uppercase mb-8">
-            INFORMAÇÕES LEGAIS
-        </h1>
+    <h2 class="text-center text-2xl mb-4 font-serif" style="letter-spacing: 0.25em;">
+        BERKSHIRE HATHAWAY <span class="text-neutral-500">INC.</span>
+    </h2>
 
-        <p class="text-justify text-base leading-relaxed memo-content">
-            Este site foi preparado com o único propósito de fornecer informações sobre a Berkshire Hathaway Inc. e os serviços e produtos que ela oferece. Este site foi compilado de boa fé pela Berkshire. No entanto, nenhuma representação é feita quanto à integridade ou precisão das informações que ele contém. Em particular, você deve estar ciente de que essas informações podem estar incompletas, conter erros ou ter se tornado desatualizadas. Os relatórios arquivados pela Berkshire junto à Securities and Exchange Commission e listados neste site são válidos apenas nas datas em que foram arquivados ou utilizados pela Berkshire. O conteúdo desses relatórios pode se tornar desatualizado. A Berkshire não assume nenhum compromisso e se isenta de qualquer dever de atualizar qualquer um desses relatórios. A Berkshire se reserva o direito de adicionar, modificar ou excluir qualquer informação neste site a qualquer momento. Esta publicação e quaisquer referências a produtos ou serviços são fornecidas "no estado em que se encontram", sem qualquer garantia ou termo implícito de qualquer tipo. <strong>A reprodução ou distribuição de quaisquer materiais obtidos neste site ou a criação de links para este site sem permissão por escrito é proibida.</strong>
+    <h1 class="text-center text-4xl title-font font-bold mb-8 text-neutral-800">
+        Informações sobre Ações Ordinárias
+    </h1>
+
+    <div class="text-center text-base max-w-3xl mx-auto mb-10 pb-8 border-b border-neutral-300">
+        <p>
+            As informações neste site são apresentadas em formato PDF. Se você não possui o software Adobe Acrobat® Reader® em seu computador, use o link a seguir para acessar o site da Adobe e fazer o download gratuito: 
+            <a href="http://www.adobe.com/" target="_blank" class="font-semibold text-red-600 hover:underline">Adobe</a>
         </p>
     </div>
 
-    <div class="mt-4">
-        <p class="text-xs text-neutral-600">Todos os direitos reservados.</p>
+    <div class="max-w-3xl mx-auto text-lg">
+        <ul class="space-y-5 list-disc list-inside">
+            <li>
+                <a href="https://www.berkshirehathaway.com/brkshareholderinfo/compab.pdf" target="_blank" class="info-link">
+                    Informações sobre as Ações Ordinárias Classe A e Classe B da Berkshire
+                </a>
+            </li>
+            <li>
+                <a href="https://www.berkshirehathaway.com/brkshareholderinfo/transferagentinfo.pdf" target="_blank" class="info-link">
+                    Informações de contato para nosso agente de transferência
+                </a>
+            </li>
+        </ul>
     </div>
-
   </main>
 
   <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200 mt-16">
