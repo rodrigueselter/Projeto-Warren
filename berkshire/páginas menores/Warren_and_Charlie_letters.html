@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartas | Berkshire Hathaway Inc.</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Cormorant', serif;
+        font-weight: 400;
+      }
+      .title-font {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-neutral-800">
+    <!-- Cabeçalho -->
+    <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
+        <a href="../index.html">
+            <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
+        </a>
+        <nav>
+            <ul class="flex gap-6 text-sm font-medium">
+            <li><a href="../index.html" class="text-lg font-bold hover:text-blue-700 transition">Principal</a></li>
+            <li><a href="../governaça.html" class="text-lg font-bold hover:text-blue-700 transition">Governança</a></li>
+            <li><a href="../Relatorios.html" class="text-lg font-bold hover:text-blue-700 transition">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container principal -->
+    <div class="min-h-screen flex flex-col items-center px-4 py-12">
+
+      <!-- Seção com os documentos -->
+      <section class="w-full max-w-5xl mt-5 px-4">
+        <h2 class="text-3xl font-bold title-font text-center text-neutral-800 mb-10">
+            Liderança Histórica
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <!-- Warren Buffett -->
+            <a
+            href="https://www.berkshirehathaway.com/SpecialLetters/WEB%20past%20present%20future%202014.pdf"
+            target="_blank"
+            class="bg-white shadow-sm hover:shadow-md border border-gray-200 rounded-xl p-6 transition transform hover:-translate-y-1"
+            >
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlT0DkMlI09qt8Va_lYYELWXbg8qGr6Qk1A&s"
+                    alt="Warren Buffett"
+                    class="w-48 h-48 object-cover rounded-full mx-auto mb-4 border-4 border-gray-200"
+                />
+                
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Carta de Warren Buffett</h2>
+                <p class="text-gray-600 text-sm mb-2">Leia o que ele tem a dizer sobre o passado, presente e futuro.</p>
+                <span class="text-blue-700 font-medium">Abrir PDF ↗</span>
+            </a>
+
+            <!-- Charlie Munger -->
+            <a
+            href="https://www.berkshirehathaway.com/SpecialLetters/CTM%20past%20present%20future%202014.pdf"
+            target="_blank"
+            class="bg-white shadow-sm hover:shadow-md border border-gray-200 rounded-xl p-6 transition transform hover:-translate-y-1"
+            >
+            <img
+                    src="https://media.investnews.com.br/uploads/2022/05/charlie-munger.jpg"
+                    alt="Warren Buffett"
+                    class="w-48 h-48 object-cover rounded-full mx-auto mb-4 border-4 border-gray-200"
+                />
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">Cartas de Charlie Munger</h2>
+            <p class="text-gray-600 text-sm mb-2">Compilado histórico com reflexões do co-gestor da Berkshire.</p>
+            <span class="text-blue-700 font-medium">Abrir PDF ↗</span>
+            </a>
+        </div>        
+      </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
+    © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
