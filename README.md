@@ -19,8 +19,6 @@ O objetivo deste projeto é aplicar os princípios de IHC para melhorar a experi
 - **JavaScript (mínimo)**  
 - **Responsividade mobile-first**
 
-## Estrutura do Projeto
-
 ## Conceitos de IHC Aplicados
 
 - **Consistência visual:** cores, tipografia e espaçamento padronizados
