@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nós | Berkshire Hathaway Inc.</title>
     
-  <!-- Google Fonts (Benton Modern substituto: Barlow) -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   
   <style>
@@ -20,160 +18,44 @@
       margin: 0;
       font-family: 'Cormorant', serif;
       font-weight: 400;
-      background-color: #fafafa;
+      background-color: #f8fafc;
       color: #262626;
     }
 
-    /* nome Warren Buffett */
-    .warren-buffett-title {
+    .title-font {
       font-family: 'Playfair Display', serif;
-      font-weight: 700; /* Peso "bold" */
     }
 
-    /* Cormorant em negrito */
-    .text-bold-cormorant {
-      font-family: 'Cormorant', serif;
-      font-weight: 600;
+    /* Estilos para a linha do tempo */
+    .timeline-item {
+        padding-left: 3rem;
+        position: relative;
+    }
+    .timeline-item:not(:last-child) {
+        padding-bottom: 2rem;
+        border-left: 2px solid #e5e7eb;
+    }
+    .timeline-dot {
+        position: absolute;
+        left: -0.6rem;
+        top: 0.25rem;
+        height: 1.125rem;
+        width: 1.125rem;
+        background-color: white;
+        border-radius: 9999px;
+        border: 2px solid #3b82f6;
+    }
+    .timeline-date {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        color: #1e3a8a; /* Azul escuro */
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #e5e5e5;
-      background-color: #f8f8f8;
-    }
-
-    header h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      padding: 0;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    nav a {
-      color: inherit;
-      font-family: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #1d4ed8;
-    }
-
-    .hero-section {
-      display: grid;
-      grid-template-columns: 1fr;
-      min-height: 600px;
-      background-color: #fafafa;
-    }
-
-    @media (min-width: 768px) {
-      .hero-section {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 2.5rem;
-    }
-
-    .hero-title {
-      font-family: serif;
-      font-size: 2.25rem;
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    @media (min-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-    }
-
-    @font-face {
-    font-family: 'Benton Modern Regular';
-    src: url('/fonts/BentonModDisp-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    @font-face {
-    font-family: 'Benton Modern SemiBold';
-    src: url('/fonts/BentonModDisp-Semibold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'Benton Modern Bold';
-    src: url('/fonts/BentonModDisp-Bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-    .hero-text {
-      margin-top: 1.5rem;
-      font-size: 1.125rem;
-      color: #525252;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #171717;
-      color: white;
-      font-size: 0.875rem;
-      font-weight: 500;
-      border-radius: 0.375rem;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-
-    .hero-button:hover {
-      background-color: #404040;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background-color: #f8f8f8;
-      font-size: 0.875rem;
-      color: #737373;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .text-neutral-500 {
-      color: #737373;
-    }
-
-    .text-sm {
-      font-size: 0.875rem;
-    }
   </style>
 </head>
 
-<body class="bg-neutral-50 text-neutral-800">
-  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200">
+<body class="bg-slate-50 text-neutral-800">
+  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-200 bg-white">
     <a href="index.html">
       <h1 class="text-3xl font-semibold">Berkshire Hathaway <span class="text-sm text-neutral-500">INC.</span></h1>
     </a>
@@ -186,17 +68,85 @@
     </nav>
   </header>
 
-  <main class="">
-    <section id="chart-container">
-      <h2 class="text-2xl font-bold text-neutral-800 mb-1">Cotação do BDR (BERK34)</h2>
-      <p class="text-neutral-500 mb-4">Dados com atualização simulada a partir do último fecho.</p>
+  <main class="container mx-auto px-4 py-16">
+
+    <!-- Seção de Introdução -->
+    <section class="text-center max-w-4xl mx-auto mb-20">
+      <h1 class="text-5xl md:text-6xl title-font font-bold text-gray-800">Sobre a Berkshire Hathaway</h1>
+      <p class="mt-6 text-xl text-gray-600 leading-relaxed">
+        Somos um conglomerado multinacional com uma filosofia única, construída sobre décadas de investimento em valor, gestão descentralizada e um foco incansável no longo prazo. Nossa história não é sobre tendências, mas sobre a aquisição e o desenvolvimento de negócios fundamentalmente sólidos.
+      </p>
+    </section>
+
+    <!-- Seção de Liderança -->
+    <section class="mb-20">
+        <h2 class="text-4xl title-font font-bold text-center mb-12">Nossa Liderança</h2>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Card Warren Buffett -->
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlT0DkMlI09qt8Va_lYYELWXbg8qGr6Qk1A&s" alt="Warren Buffett" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover ring-4 ring-blue-100">
+                <h3 class="text-3xl title-font font-bold text-blue-900">Warren E. Buffett</h3>
+                <h4 class="text-lg font-semibold text-neutral-600 mb-4">Presidente e CEO</h4>
+                <p class="text-neutral-700">Conhecido como o "Oráculo de Omaha", Warren Buffett transformou a Berkshire Hathaway de uma empresa têxtil em dificuldades em um dos maiores e mais respeitados conglomerados do mundo através de sua genialidade em alocação de capital.</p>
+            </div>
+            <!-- Card Charlie Munger -->
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                <img src="https://media.investnews.com.br/uploads/2022/05/charlie-munger.jpg" alt="Charlie Munger" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover ring-4 ring-blue-100">
+                <h3 class="text-3xl title-font font-bold text-blue-900">Charles T. Munger</h3>
+                <h4 class="text-lg font-semibold text-neutral-600 mb-4">Ex-Vice-Presidente (In Memoriam)</h4>
+                <p class="text-neutral-700">Parceiro de longa data de Buffett, Charlie Munger foi a força intelectual que ajudou a moldar a filosofia da Berkshire, enfatizando a importância de comprar negócios maravilhosos a preços justos e a sabedoria dos modelos mentais.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Linha do Tempo -->
+    <section class="max-w-3xl mx-auto mb-20">
+        <h2 class="text-4xl title-font font-bold text-center mb-12">Nossa Jornada</h2>
+        <div class="relative">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">1839</h3>
+                <p class="text-lg text-neutral-700">A Valley Falls Company, uma empresa têxtil, é fundada em Rhode Island. Este é o início da linhagem que se tornaria a Berkshire Hathaway.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">1962</h3>
+                <p class="text-lg text-neutral-700">Warren Buffett começa a comprar ações da Berkshire Hathaway, uma empresa têxtil em declínio, percebendo que suas ações estavam subvalorizadas.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">1965</h3>
+                <p class="text-lg text-neutral-700">Buffett assume o controle da empresa e começa a usar seu capital para investir em outros negócios, marcando o início da transformação da Berkshire.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">1967</h3>
+                <p class="text-lg text-neutral-700">A Berkshire adquire a National Indemnity Company, sua primeira incursão no setor de seguros, que se tornaria a espinha dorsal financeira do conglomerado.</p>
+            </div>
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">1996</h3>
+                <p class="text-lg text-neutral-700">Aquisição da GEICO, uma das maiores seguradoras de automóveis dos EUA, em um movimento que solidificou a posição dominante da Berkshire no setor de seguros.</p>
+            </div>
+             <div class="timeline-item" style="border-left: none;">
+                <div class="timeline-dot"></div>
+                <h3 class="text-2xl timeline-date">Hoje</h3>
+                <p class="text-lg text-neutral-700">A Berkshire Hathaway é um conglomerado global que detém integralmente dezenas de empresas em diversos setores, desde ferrovias e energia até varejo e bens de consumo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Gráfico -->
+    <section id="chart-container" class="bg-white p-8 rounded-lg shadow-md">
+      <h2 class="text-3xl title-font font-bold text-neutral-800 mb-2">Nosso Desempenho</h2>
+      <p class="text-neutral-500 mb-6">Cotação histórica do BDR (BERK34) na B3, com atualização simulada a partir do último fecho.</p>
       <div id="stockChart" style="display: none;"></div>
-      <div id="loading" class="text-center py-8">A carregar dados do gráfico...</div>
+      <div id="loading" class="text-center py-8 text-neutral-600">A carregar dados do gráfico...</div>
     </section>
   </main>
 
   <!-- Rodapé -->
-  <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200">
+  <footer class="text-lg text-neutral-500 text-center py-6 border-t border-neutral-200 bg-white mt-16">
     © 1978–2025 Berkshire Hathaway Inc. Todos os direitos reservados.
   </footer>
 </body>

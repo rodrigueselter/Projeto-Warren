@@ -61,39 +61,63 @@
     </nav>
   </header>
 
-    <!-- Conteúdo -->
-    <main class="max-w-6xl mx-auto px-4 py-16">
-      <h1 class="text-4xl font-bold title-font text-center text-gray-800 mb-16">Saiba Mais</h1>
+  <!-- Conteúdo -->
+  <main class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold title-font text-gray-800">Saiba Mais</h1>
+      <p class="mt-4 text-xl text-gray-600">Encontre relatórios, cartas e informações importantes sobre a Berkshire Hathaway.</p>
+    </div>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- Coluna 1 -->
-        <div class="space-y-8">
-          <!-- Seção -->
-          <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Documentos Corporativos</h2>
-            <ul class="space-y-3 text-gray-600">
-              <li><a href="Relatorios.html" class="hover:text-blue-700 transition">Relatórios Anuais e Intermediários (Março 2023)</a></li>
-              <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?company=berkshire+hathaway&match=&CIK=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany " class="hover:text-blue-700 transition">Arquivos da SEC</a></li>
-              <li><a href="páginas menores/Warren_and_Charlie_letters.html" class="hover:text-blue-700 transition">Cartas Especiais de Warren & Charlie</a></li>
-              <li><a href="páginas menores/Sustentabilidade.html" class="hover:text-blue-700 transition">Sustentabilidade</a></li>
-            </ul>
-          </section>
+    <div id="accordion-container" class="space-y-4">
 
-          <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Comunicação</h2>
-            <ul class="space-y-3 text-gray-600">
-              <li><a href="páginas menores/ComunicadoImprensa.html" class="hover:text-blue-700 transition">Comunicados à Imprensa (Março 2023)</a></li>
-              <li><a href="páginas menores/Assembleia.html" class="hover:text-blue-700 transition">Informações da Assembleia Anual</a></li>
-              <li><a href="https://www.berkshirehathaway.com/webfraud.pdf" class="hover:text-blue-700 transition">Alegações Fraudulentas</a></li>
-            </ul>
-          </section>
+      <!-- Item 1: Documentos Corporativos -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
+        <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
+          <span class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <span class="text-2xl font-semibold text-blue-800">Documentos Corporativos</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow text-gray-500"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="accordion-panel">
+          <ul class="space-y-3 text-gray-600 pl-10 border-l border-gray-200">
+            <li><a href="Relatorios.html" class="hover:text-blue-700 transition">Relatórios Anuais e Intermediários</a></li>
+            <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?company=berkshire+hathaway&match=&CIK=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany" target="_blank" class="hover:text-blue-700 transition">Arquivos da SEC</a></li>
+            <li><a href="páginas menores/Warren_and_Charlie_letters.html" class="hover:text-blue-700 transition">Cartas Especiais de Warren & Charlie</a></li>
+            <li><a href="páginas menores/Sustentabilidade.html" class="hover:text-blue-700 transition">Sustentabilidade</a></li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Coluna 2 -->
-        <div class="space-y-8">
-          <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-4">Materiais Históricos</h2>
-            <ul class="space-y-3 text-gray-600">
+      <!-- Item 2: Comunicação -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
+        <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
+          <span class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg>
+            <span class="text-2xl font-semibold text-blue-800">Comunicação</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow text-gray-500"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="accordion-panel">
+           <ul class="space-y-3 text-gray-600 pl-10 border-l border-gray-200">
+            <li><a href="páginas menores/ComunicadoImprensa.html" class="hover:text-blue-700 transition">Comunicados à Imprensa</a></li>
+            <li><a href="páginas menores/Assembleia.html" class="hover:text-blue-700 transition">Informações da Assembleia Anual</a></li>
+            <li><a href="https://www.berkshirehathaway.com/webfraud.pdf" target="_blank" class="hover:text-blue-700 transition">Alegações Fraudulentas</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Item 3: Materiais Históricos -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
+        <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
+          <span class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span class="text-2xl font-semibold text-blue-800">Materiais Históricos</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow text-gray-500"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="accordion-panel">
+           <ul class="space-y-3 text-gray-600 pl-10 border-l border-gray-200">
               <li><a href="#" class="hover:text-blue-700 transition">Cartas de Warren Buffett aos Acionistas</a></li>
               <li><a href="#" class="hover:text-blue-700 transition">Cartas de Charlie Munger aos Acionistas</a></li>
               <li><a href="#" class="hover:text-blue-700 transition">Livro Comemorativo</a></li>
@@ -105,7 +129,6 @@
       <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
         <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
           <span class="flex items-center">
-            <!-- Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             <span class="text-2xl font-semibold text-blue-800">Informações Gerais</span>
           </span>
@@ -125,7 +148,6 @@
       <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm bg-white">
         <button class="accordion-button w-full flex justify-between items-center p-6 text-left hover:bg-slate-100/50">
           <span class="flex items-center">
-            <!-- Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700 mr-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             <span class="text-2xl font-semibold text-blue-800">Avisos Legais</span>
           </span>
